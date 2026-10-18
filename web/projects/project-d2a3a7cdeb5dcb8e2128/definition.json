@@ -1,0 +1,377 @@
+{
+  "title": "COLD SIGNAL",
+  "name": "可口可乐 · 经典玻璃瓶字符海报",
+  "description": "依官方1957玻璃瓶图片比例重建 / 连续瓶肩与收腰 / 纵向凹槽 / 三维字符",
+  "lower": "",
+  "width": 720,
+  "height": 1280,
+  "loopSeconds": 6,
+  "inkColor": "#ffdfb4",
+  "glowColor": "#ff3f1f",
+  "intersection": "#2a0704",
+  "softInk": [
+    70,
+    8,
+    2
+  ],
+  "version": 3,
+  "renderer": "raster-poster",
+  "layers": [
+    {
+      "id": "cold-title",
+      "type": "image",
+      "x": 13.772582359192349,
+      "y": 47.464114832535884,
+      "w": 693.2199787460149,
+      "h": 134.73684210526315,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "",
+      "name": "主标题 COLD · 电压不稳",
+      "sourceRect": [
+        13.772582359192349,
+        47.464114832535884,
+        693.2199787460149,
+        134.73684210526315
+      ],
+      "motion": {
+        "type": "voltage",
+        "bpm": 100,
+        "amount": 0.56,
+        "detail": 6,
+        "duty": 0.25,
+        "phase": 0
+      }
+    },
+    {
+      "id": "signal-title",
+      "type": "image",
+      "x": 13.772582359192349,
+      "y": 180.66985645933013,
+      "w": 693.2199787460149,
+      "h": 107.17703349282297,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "",
+      "name": "主标题 SIGNAL · 电波干扰",
+      "sourceRect": [
+        13.772582359192349,
+        180.66985645933013,
+        693.2199787460149,
+        107.17703349282297
+      ],
+      "motion": {
+        "type": "voltage",
+        "bpm": 120,
+        "amount": 0.42,
+        "detail": 5,
+        "duty": 0.2,
+        "phase": 0.37
+      }
+    },
+    {
+      "id": "cola-bottle",
+      "type": "bottle3d",
+      "x": 100,
+      "y": 319,
+      "w": 520,
+      "h": 800,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "",
+      "name": "可乐瓶 · 三维字符曲面",
+      "bottle": {
+        "rotate": true,
+        "mode": "sway",
+        "yaw": 55,
+        "pitch": 12,
+        "float": 0.45,
+        "contrast": 1.2
+      },
+      "logoSourceRect": [
+        266.2699256110521,
+        1110.047846889952,
+        185.16471838469712,
+        84.21052631578948
+      ],
+      "motion": {
+        "type": "none",
+        "bpm": 10,
+        "amount": 0.72,
+        "detail": 4,
+        "duty": 0.3,
+        "phase": 0
+      }
+    },
+    {
+      "id": "cola-bubbles",
+      "type": "particles",
+      "x": 130.07438894792773,
+      "y": 289.377990430622,
+      "w": 198.93730074388947,
+      "h": 168.42105263157896,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "",
+      "name": "瓶口字符气泡",
+      "motion": {
+        "type": "rise",
+        "bpm": 10,
+        "amount": 0.8,
+        "detail": 5,
+        "duty": 0.3,
+        "phase": 0.12
+      }
+    },
+    {
+      "id": "cola-logo",
+      "type": "image",
+      "x": 266.2699256110521,
+      "y": 1110.047846889952,
+      "w": 185.16471838469712,
+      "h": 84.21052631578948,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "",
+      "name": "底部小 Logo · 磷光呼吸",
+      "sourceRect": [
+        266.2699256110521,
+        1110.047846889952,
+        185.16471838469712,
+        84.21052631578948
+      ],
+      "motion": {
+        "type": "pulse",
+        "bpm": 20,
+        "amount": 0.4,
+        "detail": 4,
+        "duty": 0.3,
+        "phase": 0.18
+      }
+    },
+    {
+      "id": "cola-wave",
+      "type": "wave",
+      "x": 26.014877789585547,
+      "y": 1213.3971291866028,
+      "w": 82.63549415515409,
+      "h": 39.80861244019139,
+      "scale": 1,
+      "rotation": 0,
+      "opacity": 1,
+      "visible": true,
+      "color": "#ff4934",
+      "name": "左下角波形",
+      "motion": {
+        "type": "wave",
+        "bpm": 90,
+        "amount": 0.85,
+        "detail": 4,
+        "duty": 0.3,
+        "phase": 0
+      }
+    }
+  ],
+  "fps": 30,
+  "id": "project-d2a3a7cdeb5dcb8e2128",
+  "imported": true,
+  "base": "projects/project-d2a3a7cdeb5dcb8e2128/base.png",
+  "source": "projects/project-d2a3a7cdeb5dcb8e2128/source.png",
+  "thumbnail": "projects/project-d2a3a7cdeb5dcb8e2128/thumbnail.png",
+  "initialSettings": {
+    "version": 1,
+    "subject": "project-d2a3a7cdeb5dcb8e2128",
+    "style": "code",
+    "size": 1,
+    "density": 1,
+    "speed": 1,
+    "glow": 1,
+    "posterTexture": 0.9,
+    "crtDelay": 0,
+    "crtJump": 1,
+    "crtScan": 0.16,
+    "ink": "#ffdfb4",
+    "glowColor": "#ff3f1f",
+    "reverse": false,
+    "posterHeadline": [
+      "STILL",
+      "FEELING?"
+    ],
+    "layers": [
+      {
+        "id": "cold-title",
+        "type": "image",
+        "x": 13.772582359192349,
+        "y": 47.464114832535884,
+        "w": 693.2199787460149,
+        "h": 134.73684210526315,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "",
+        "name": "主标题 COLD · 电压不稳",
+        "sourceRect": [
+          13.772582359192349,
+          47.464114832535884,
+          693.2199787460149,
+          134.73684210526315
+        ],
+        "motion": {
+          "type": "voltage",
+          "bpm": 100,
+          "amount": 0.56,
+          "detail": 6,
+          "duty": 0.25,
+          "phase": 0
+        }
+      },
+      {
+        "id": "signal-title",
+        "type": "image",
+        "x": 13.772582359192349,
+        "y": 180.66985645933013,
+        "w": 693.2199787460149,
+        "h": 107.17703349282297,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "",
+        "name": "主标题 SIGNAL · 电波干扰",
+        "sourceRect": [
+          13.772582359192349,
+          180.66985645933013,
+          693.2199787460149,
+          107.17703349282297
+        ],
+        "motion": {
+          "type": "voltage",
+          "bpm": 120,
+          "amount": 0.42,
+          "detail": 5,
+          "duty": 0.2,
+          "phase": 0.37
+        }
+      },
+      {
+        "id": "cola-bottle",
+        "type": "bottle3d",
+        "x": 100,
+        "y": 319,
+        "w": 520,
+        "h": 800,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "",
+        "name": "可乐瓶 · 三维字符曲面",
+        "bottle": {
+          "rotate": true,
+          "mode": "sway",
+          "yaw": 55,
+          "pitch": 12,
+          "float": 0.45,
+          "contrast": 1.2
+        },
+        "logoSourceRect": [
+          266.2699256110521,
+          1110.047846889952,
+          185.16471838469712,
+          84.21052631578948
+        ],
+        "motion": {
+          "type": "none",
+          "bpm": 10,
+          "amount": 0.72,
+          "detail": 4,
+          "duty": 0.3,
+          "phase": 0
+        }
+      },
+      {
+        "id": "cola-bubbles",
+        "type": "particles",
+        "x": 130.07438894792773,
+        "y": 289.377990430622,
+        "w": 198.93730074388947,
+        "h": 168.42105263157896,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "",
+        "name": "瓶口字符气泡",
+        "motion": {
+          "type": "rise",
+          "bpm": 10,
+          "amount": 0.8,
+          "detail": 5,
+          "duty": 0.3,
+          "phase": 0.12
+        }
+      },
+      {
+        "id": "cola-logo",
+        "type": "image",
+        "x": 266.2699256110521,
+        "y": 1110.047846889952,
+        "w": 185.16471838469712,
+        "h": 84.21052631578948,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "",
+        "name": "底部小 Logo · 磷光呼吸",
+        "sourceRect": [
+          266.2699256110521,
+          1110.047846889952,
+          185.16471838469712,
+          84.21052631578948
+        ],
+        "motion": {
+          "type": "pulse",
+          "bpm": 20,
+          "amount": 0.4,
+          "detail": 4,
+          "duty": 0.3,
+          "phase": 0.18
+        }
+      },
+      {
+        "id": "cola-wave",
+        "type": "wave",
+        "x": 26.014877789585547,
+        "y": 1213.3971291866028,
+        "w": 82.63549415515409,
+        "h": 39.80861244019139,
+        "scale": 1,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "color": "#ff4934",
+        "name": "左下角波形",
+        "motion": {
+          "type": "wave",
+          "bpm": 90,
+          "amount": 0.85,
+          "detail": 4,
+          "duty": 0.3,
+          "phase": 0
+        }
+      }
+    ]
+  }
+}

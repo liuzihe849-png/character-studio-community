@@ -1,0 +1,27 @@
+{
+  "title": "Pelagic",
+  "name": "水母",
+  "description": "收缩 / 浮游 / 深海",
+  "lower": "floating",
+  "width": 720,
+  "height": 960,
+  "loopSeconds": 6,
+  "inkColor": "#fff9ee",
+  "glowColor": "#719fe4",
+  "intersection": "#172c42",
+  "softInk": [
+    159,
+    185,
+    215
+  ],
+  "tileWidth": 180,
+  "tileHeight": 240,
+  "frames": 75,
+  "columns": 10,
+  "id": "project-f05fe7a6d7c89b8449f2",
+  "imported": true,
+  "base": "projects/project-f05fe7a6d7c89b8449f2/base.png",
+  "mask": "projects/project-f05fe7a6d7c89b8449f2/mask.png",
+  "atlas": "projects/project-f05fe7a6d7c89b8449f2/atlas.png",
+  "thumbnail": "projects/project-f05fe7a6d7c89b8449f2/thumbnail.png"
+}

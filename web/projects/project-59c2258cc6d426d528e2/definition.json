@@ -1,0 +1,51 @@
+{
+  "title": "I’m OK",
+  "name": "百合",
+  "description": "专辑配色 / 独立花型 / 连续开合",
+  "lower": "feeling",
+  "width": 720,
+  "height": 960,
+  "loopSeconds": 6,
+  "inkColor": "#fffbeb",
+  "glowColor": "#ffc71f",
+  "intersection": "#14294c",
+  "softInk": [
+    110,
+    110,
+    92
+  ],
+  "tileWidth": 180,
+  "tileHeight": 240,
+  "frames": 75,
+  "columns": 10,
+  "id": "project-59c2258cc6d426d528e2",
+  "imported": true,
+  "base": "projects/project-59c2258cc6d426d528e2/base.png",
+  "mask": "projects/project-59c2258cc6d426d528e2/mask.png",
+  "atlas": "projects/project-59c2258cc6d426d528e2/atlas.png",
+  "thumbnail": "projects/project-59c2258cc6d426d528e2/thumbnail.png",
+  "initialSettings": {
+    "version": 1,
+    "subject": "project-59c2258cc6d426d528e2",
+    "style": "ascii",
+    "size": 1,
+    "density": 1,
+    "speed": 1,
+    "glow": 1,
+    "posterTexture": 0.9,
+    "crtDelay": 0,
+    "crtJump": 1,
+    "crtScan": 0.16,
+    "ink": "#fffbeb",
+    "glowColor": "#ffc71f",
+    "reverse": false,
+    "captions": [
+      "SO, WHAT",
+      "DO YOU FEEL?"
+    ],
+    "posterHeadline": [
+      "STILL",
+      "FEELING?"
+    ]
+  }
+}

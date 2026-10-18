@@ -1,0 +1,51 @@
+{
+  "title": "groupies",
+  "name": "鸢尾",
+  "description": "专辑配色 / 独立花型 / 连续开合",
+  "lower": "drifting",
+  "width": 720,
+  "height": 960,
+  "loopSeconds": 6,
+  "inkColor": "#f7fbff",
+  "glowColor": "#6ea8f2",
+  "intersection": "#0f2447",
+  "softInk": [
+    87,
+    110,
+    143
+  ],
+  "tileWidth": 180,
+  "tileHeight": 240,
+  "frames": 75,
+  "columns": 10,
+  "id": "project-807702fd54b5180a24ea",
+  "imported": true,
+  "base": "projects/project-807702fd54b5180a24ea/base.png",
+  "mask": "projects/project-807702fd54b5180a24ea/mask.png",
+  "atlas": "projects/project-807702fd54b5180a24ea/atlas.png",
+  "thumbnail": "projects/project-807702fd54b5180a24ea/thumbnail.png",
+  "initialSettings": {
+    "version": 1,
+    "subject": "project-807702fd54b5180a24ea",
+    "style": "code",
+    "size": 1,
+    "density": 1,
+    "speed": 1,
+    "glow": 1,
+    "posterTexture": 0.9,
+    "crtDelay": 0,
+    "crtJump": 1,
+    "crtScan": 0.16,
+    "ink": "#f7fbff",
+    "glowColor": "#6ea8f2",
+    "reverse": false,
+    "captions": [
+      "SO, WHAT",
+      "DO YOU FEEL?"
+    ],
+    "posterHeadline": [
+      "STILL",
+      "FEELING?"
+    ]
+  }
+}

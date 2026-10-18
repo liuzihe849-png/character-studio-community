@@ -1,0 +1,27 @@
+{
+  "title": "Flutter",
+  "name": "蝴蝶",
+  "description": "展翅 / 翅脉 / 蜕变",
+  "lower": "becoming",
+  "width": 720,
+  "height": 960,
+  "loopSeconds": 6,
+  "inkColor": "#fff9ee",
+  "glowColor": "#d5ad56",
+  "intersection": "#172c42",
+  "softInk": [
+    152,
+    191,
+    168
+  ],
+  "tileWidth": 180,
+  "tileHeight": 240,
+  "frames": 75,
+  "columns": 10,
+  "id": "project-9e936228fb00112ff7d9",
+  "imported": true,
+  "base": "projects/project-9e936228fb00112ff7d9/base.png",
+  "mask": "projects/project-9e936228fb00112ff7d9/mask.png",
+  "atlas": "projects/project-9e936228fb00112ff7d9/atlas.png",
+  "thumbnail": "projects/project-9e936228fb00112ff7d9/thumbnail.png"
+}
