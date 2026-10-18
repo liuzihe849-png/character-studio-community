@@ -142,6 +142,7 @@ async function boot(){
   $('importProject').addEventListener('click',()=>$('projectFile').click());
   $('projectFile').addEventListener('change',async event=>{
    const files=Array.from(event.target.files);if(!files.length)return;
+   try{await AgentPanel.flush()}catch(e){toast('打开前保存失败：'+e.message);event.target.value='';return}
    document.querySelectorAll('.actions button,#creationStage button,#creationStage input,#creationStage select').forEach(b=>b.disabled=true);$('controls').disabled=true;state.playing=false;let imported=0;
    try{for(const file of files){$('status').textContent='正在导入 '+file.name+'…';if(file.size>64000000)throw Error('项目包超过 64MB');
     const resp=await fetch('api/projects/import',{method:'POST',headers:{'Content-Type':'application/zip'},body:file});const result=await resp.json();if(!resp.ok)throw Error(result.error||'导入失败');
