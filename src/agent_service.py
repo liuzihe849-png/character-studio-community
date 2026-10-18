@@ -247,7 +247,7 @@ class AgentService:
   self.history=json.loads(self.history_path.read_text(encoding='utf-8')) if self.history_path.exists() else {}
  def save_json(self,path,data):
   temp=path.with_suffix('.tmp');fd=os.open(temp,os.O_WRONLY|os.O_CREAT|os.O_TRUNC,0o600)
-  with os.fdopen(fd,'w') as f:json.dump(data,f,ensure_ascii=False)
+  with os.fdopen(fd,'w',encoding='utf-8') as f:json.dump(data,f,ensure_ascii=False)
   os.replace(temp,path);os.chmod(path,0o600)
  def status(self):
   with self.lock:return dict(token=self.token,config={k:v for k,v in self.config.items() if k!='apiKey'},hasKey=bool(self.config.get('apiKey')),codexConnected=bool(self.bridge.proc and self.bridge.proc.poll() is None),models=self.bridge.models,scope='本地试用 · 对话编辑与已有模板复用')
