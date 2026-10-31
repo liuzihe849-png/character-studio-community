@@ -28,6 +28,9 @@ def main():
  else:data=Path(os.environ.get('XDG_DATA_HOME',str(Path.home()/'.local/share')))/'character-studio-community'
  editor=prepare(data)
  if a.check:
-  print(json.dumps(dict(python=platform.python_version(),platform=platform.system(),templates=len(json.loads((editor/'fan-templates.json').read_text(encoding='utf-8'))),encoderAvailable=Path(imageio_ffmpeg.get_ffmpeg_exe()).is_file(),codexFound=bool(shutil.which('codex') or shutil.which('codex.exe')),dataDirectory=str(data)),ensure_ascii=False,indent=2));return
+  sys.path.insert(0,str(REPO/'src'))
+  from agent_service import codex_binary
+  binary=codex_binary()
+  print(json.dumps(dict(python=platform.python_version(),platform=platform.system(),templates=len(json.loads((editor/'fan-templates.json').read_text(encoding='utf-8'))),encoderAvailable=Path(imageio_ffmpeg.get_ffmpeg_exe()).is_file(),codexFound=bool(binary),codexPath=binary or '',dataDirectory=str(data)),ensure_ascii=False,indent=2));return
  os.environ['CHARACTER_STUDIO_ROOT']=str(editor);sys.path.insert(0,str(REPO/'src'));sys.argv=['server','--port',str(a.port)]+([] if a.no_open else ['--open']);runpy.run_module('server',run_name='__main__')
 if __name__=='__main__':main()
