@@ -3,7 +3,7 @@
 Codex uses its documented stdio app-server and client-executed tools. Other models
 can use Responses or Chat Completions compatible APIs with the same tool boundary.
 """
-import base64,copy,hashlib,io,json,os,queue,re,secrets,shutil,struct,subprocess,threading,time,uuid,zipfile
+import base64,copy,hashlib,io,json,os,queue,re,secrets,shutil,struct,subprocess,sys,threading,time,uuid,zipfile
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request,build_opener,HTTPRedirectHandler
@@ -29,6 +29,20 @@ image/phosphor中的原图标题不是活文字，不能设置text或声称能�
 改完后调用studio_preview在合适phase核对画面。若内联截图未能显示且有preview_path，必须用view_image打开该图片再判断，不重复请求同一张截图。确实不可用时说明尚未核对，不声称视觉验收通过。
 已有模板可通过studio_list_templates和studio_create_from_template复制为新作品；这是复用模板，不是根据任意参考重新建模。新项目与原作分开保存。
 只有用户要求撤销时才studio_restore_project。汇报具体改动、是否已预览，以及必要的能力限制，不输出文件路径、内部参数或长技术说明。'''
+
+def codex_binary():
+ """按 环境变量 → PATH → 平台安装位置 定位 Codex CLI。Windows 桌面版装在 hash 目录下，不在 PATH 上。"""
+ configured=os.environ.get('CHARACTER_STUDIO_CODEX')
+ if configured and Path(configured).is_file():return configured
+ for name in ('codex.exe','codex'):
+  found=shutil.which(name)
+  if found:return found
+ candidates=['/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex','/Applications/Codex.app/Contents/Resources/codex'] if sys.platform=='darwin' else []
+ root=Path(os.environ.get('LOCALAPPDATA') or Path.home()/'AppData'/'Local')/'OpenAI'/'Codex'/'bin'
+ if os.name=='nt' and root.is_dir():candidates+=[str(p) for p in sorted(root.glob('*/codex.exe'),key=lambda p:p.stat().st_mtime,reverse=True)]
+ for path in candidates:
+  if Path(path).is_file():return path
+ return None
 
 def schema(props,required=()):return dict(type='object',properties=props,required=list(required),additionalProperties=False)
 TOOLS=[
@@ -91,10 +105,7 @@ class CodexBridge:
    with self.lock:self.pending.pop(rid,None)
  def connect(self):
   if not self.proc or self.proc.poll() is not None:
-   binary=os.environ.get('CHARACTER_STUDIO_CODEX') or shutil.which('codex.exe') or shutil.which('codex')
-   if not binary:
-    for path in ['/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex','/Applications/Codex.app/Contents/Resources/codex']:
-     if Path(path).is_file():binary=path;break
+   binary=codex_binary()
    if not binary:raise ValueError('未找到你电脑上的 Codex。请先安装 Codex CLI 并登录；或选择自己的模型 API。')
    command=[binary,'app-server']
    if os.name=='nt' and Path(binary).suffix.lower() in ['.cmd','.bat']:command=[os.environ.get('COMSPEC','cmd.exe'),'/d','/c',binary,'app-server']
